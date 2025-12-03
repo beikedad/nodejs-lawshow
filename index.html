@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawshow - Minimalist</title>
+    <style>
+        /* --- 基础重置 --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --- 全局变量与字体 --- */
+        :root {
+            --bg-color: #fcfcfc;       /* 背景色：几近白色的灰 */
+            --text-main: #333333;      /* 主文本色 */
+            --text-muted: #888888;     /* 次级文本色 */
+            --accent-color: #000000;   /* 强调色：纯黑 */
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- 容器布局 --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        /* --- 顶部导航 --- */
+        header {
+            padding: 2rem 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        /* --- 主要内容区域 (Hero) --- */
+        main {
+            flex: 1; /* 让内容撑满，把footer推到底部 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 垂直居中 */
+            padding: 4rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* --- 按钮样式 --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 50px; /* 圆角胶囊形状 */
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* --- 底部 --- */
+        footer {
+            padding: 2rem 0;
+            border-top: 1px solid #eaeaea;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* --- 移动端适配 --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .container { padding: 0 1.5rem; }
+            .footer-content { flex-direction: column; gap: 1rem; text-align: center; }
+            nav { flex-direction: column; gap: 1rem; }
+            .nav-links a { margin: 0 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Lawshow</a>
+                <div class="nav-links">
+                    <a href="#">关于</a>
+                    <a href="#">项目</a>
+                    <a href="#">联系</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Less is more.<br>专注于本质。</h1>
+            <p class="subtitle">
+                这是一个极简风格的网页模板。它去除了所有不必要的干扰，让您的内容成为绝对的主角。
+            </p>
+            <a href="https://github.com/Lawshow/lawshow" class="btn">查看 GitHub</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <span>&copy; 2025 Lawshow. All rights reserved.</span>
+            <span>Design by Minimalist</span>
+        </div>
+    </footer>
+
+</body>
+</html>
